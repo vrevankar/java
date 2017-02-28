@@ -10,7 +10,7 @@ public class ReverseStrRec {
     System.out.println("Reverse String: " + new ReverseStrRec().reverseStr(scanner.nextLine()));
   }
 
-  public String reverseStr(String str){
+  public String reverseStr(String str) {
     if (str.length() == 0) return str;
     return reverseStr(str.substring(1)) + str.charAt(0);
   }
