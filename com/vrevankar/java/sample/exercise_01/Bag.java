@@ -6,7 +6,7 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * Created by vinay on 6/6/17.
+ * Created by Vinay on 6/6/17.
  */
 public class Bag<E> {
 

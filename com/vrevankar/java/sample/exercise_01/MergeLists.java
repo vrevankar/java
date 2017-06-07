@@ -3,7 +3,7 @@ package com.vrevankar.java.sample.exercise_01;
 import java.util.*;
 
 /**
- * Created by vinay on 6/6/17.
+ * Created by Vinay on 6/6/17.
  */
 public class MergeLists<T> {
 
