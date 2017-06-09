@@ -85,7 +85,7 @@ public class ExternalSort implements Comparator<StringBuilder> {
 
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String... args) throws IOException {
 
         System.out.print("Input File Path: ");
         String inputFilePath = new Scanner(System.in).nextLine();
