@@ -1,0 +1,13 @@
+Serial Collector: Designed for single-threaded environments
+Parallel/Throughput collector:
+Default collector
+Uses multiple threads to compact the heap
+Disadv: Stops application threads while performing minor/full GC collection.
+CMS Collector:
+Can cause application pauses
+Not suitable for heap size greater than 4GB.
+Runs in multiple threads there by
+G1 Collector: –XX:+UseG1GC
+It divides the heap into regions, garbage collects those regions first that contain maximum garbage objects
+Each region varies between 1MB to 32MB.
+String reduplication: Converts strings duplicated more than once across the heap to char[].

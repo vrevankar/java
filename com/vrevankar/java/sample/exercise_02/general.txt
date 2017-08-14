@@ -1,0 +1,16 @@
+Java ..
+
+Immutable Class:
+Final class so it can’t be extended.
+Private fields so direct access is not allowed.
+Final mutable fields so their values can be assigned only once.
+No setter methods
+Field initialization via constructor.
+Do not return object reference in getter methods. Instead return a copy.
+
+Collections.synchornizedMap(HashMap) -> HashTable
+
+ConcurrentHashMap performs better than Synchronized Hash Map
+
+Hashtable vs ConcurrentHashMap:
+As the data grows, Hashtable performance degrades as it locks the entire collection. CuncurrentHashMap are best choice for multithreaded environment that requires large dataset because it only locks the portion of the collection, bucket lock.

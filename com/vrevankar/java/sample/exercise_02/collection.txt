@@ -1,0 +1,25 @@
+JAVA
+
+TreeSet implements Set, NavigableSet
+NavigableSet extends SortedSet
+HASH -> Order not guaranteed
+LINKED -> Natural order
+TREE -> ASCENDING order
+Set, Queue, Stack extend Collection
+Map doesn’t extend Collection
+HashMap allows a key with null value
+PriorityQueue -> Retains the order
+BlockingQueue -> Wait till element in queue becomes available; wait can be infinite, or we can mention the waiting period
+
+Thread States > NEW, RUNNABLE, RUNNING, WAITING/BLOCKED, TERMINATED/DEAD
+Default Priority: 5
+Priority varies: 1 (MIN) to 10 (MAX)
+ExecutorService: Executes tasks asynchronously in background. It is similar to thread pool.
+A thread can return a value by call method of Callable functional interface.
+thread3.join() -> Wait till thread 3 completes execution before proceeding to next line.
+thread3.join(2000) -> Wait 2 sec on thread 3 to complete execution before proceeding to next line.
+Thread vs Runnable > Extend Thread class only if we are using complete functionality of thread class
+yield(): It gives chance to other threads to complete the task
+sleep vs wait:
+sleep will not return resources before going to blocked states.
+wait will get into RUNNABLE state until notify() is called

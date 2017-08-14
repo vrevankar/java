@@ -1,0 +1,41 @@
+public static Object cacheLock = new Object();
+  public static Object tableLock = new Object();
+  ...
+  public void oneMethod() {
+    synchronized (cacheLock) {
+      synchronized (tableLock) {
+        doSomething();
+      }
+    }
+  }
+  public void anotherMethod() {
+    synchronized (tableLock) {
+      synchronized (cacheLock) {
+        doSomethingElse();
+      }
+    }
+  }
+
+How to avoid deadlocks
+Avoid acquiring more than one lock at a time. If that is not possible, we need to define a strategy that ensures program acquire multiple locks in a consistent, defined order.
+Shrink the synchronized block: Do as little as possible when you hold the lock.
+Use an ordering to acquire locks in a fixed sequence
+Use Immutable types
+Use local locks instead of global
+
+start() -> Creates the thread before so that run() will be executed in parallel.
+run() -> Without start, just like calling any other method.
+
+Multi-Threading
+Sole purpose of using concurrency is to produce scalable and faster program.
+
+Use Local Variables: Global variables are accessible to multiple threads there by causing the conflict in value.
+Prefer Immutable Classes: Immutable classes once created cannot be modified there by reducing synchronization.
+Minimize locking scope
+Executor Framework: Managing threads is a framework level task and should be better off left to Java Executor framework. We may otherwise end up having lots of boiler-plate code and mixing those with business logic may reduce readability.
+Synchronized Blocks
+Avoid static variables: If you happen to use static variable, consider it making static final constants and if static variables are used to store Collections like List or Map then consider using only read only collections.
+
+newSingleThreadExecutor
+newFixedThreadPool
+

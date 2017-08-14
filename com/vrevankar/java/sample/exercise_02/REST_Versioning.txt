@@ -1,0 +1,24 @@
+REST Versioning
+
+URI Versioning (Endpoint) …/person/v1
+	@GetMapping(“person/v1”)
+	@GetMapping(“person/v2”)
+
+Request Param Versioning …?version=1
+	@GetMapping(value=“person/param”, params=“version=v1")
+
+Header Versioning > X_API_VERSION=1
+	@GetMapping(value=“person/header”, headers=“X_API_VERSION=v1")
+
+Media Type Versioning > Accept = application/vnd.company.app-v1+json
+	@GetMapping(value=“person/header”, produces=“ application/vnd.company.app-v1+json”)
+
+Pros & Cons:
+URI & Request Param Versioning:
+Pros:
+Doesn’t need plug-in or tools like postman which makes it easier for nontechnical audience
+Cons:
+URI pollution
+Header & Media-type Versioning:
+Misuse of HTTP headers (HTTP headers are not meant for versioning)
+Needs plug-in or tools like postman

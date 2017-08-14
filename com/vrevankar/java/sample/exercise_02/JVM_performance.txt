@@ -1,0 +1,9 @@
+Grant as much memory as possible to virtual machine
+Set -Xms and -Xmx to the same value
+increase memory when number of processors are increased since allocation can be parallelized.
+tune the Perm generation
+Use multithreading only if it benefits.
+Avoid premature object creation.
+Avoid Reflection
+StringBuffer instead of String concat
+JSPs are generally slower than servlets.
